@@ -1,3 +1,3 @@
-FROM eclipse-temurin:17-jre-alpine
+FROM openjdk:17-jdk-slim-buster
 ADD target/gitactionsdemoproj-0.0.1-SNAPSHOT.jar gitactionsdemoapp.jar
-CMD ["/usr/bin/java", "-jar", "/gitactionsdemoapp.war"]
+CMD ["java", "-jar", "/gitactionsdemoapp.jar"]
