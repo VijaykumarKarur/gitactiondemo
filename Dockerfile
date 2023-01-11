@@ -1,4 +1,3 @@
-FROM openjdk:17
-EXPOSE 9001
-ADD target/gitactionsdemoapp.jar gitactionsdemoapp.jar
-ENTRYPOINT ["java", "jar", "/gitactionsdemoapp.jar"]
+FROM openjdk:17-jre-alpine
+ADD target/gitactionsdemoproj-0.0.1-SNAPSHOT.jar gitactionsdemoapp.jar
+CMD ["/usr/bin/java", "-jar", "/gitactionsdemoapp.war"]
